@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "@/App";
-import { Detail, Home } from "@pages/index";
-import { ROUTE_PATH } from "@constants/index";
+import { Detail, Home } from "@/pages";
+import { ROUTE_PATH } from "@/constants";
 
 const router = createBrowserRouter([
   {
