@@ -11,16 +11,17 @@ interface RequestOptions {
 export class HttpClient {
   constructor(private baseURL: string) {}
 
-  public get = async (endPoint: string, options?: RequestOptions) => {
+  public get = async <T>(
+    endPoint: string,
+    options?: RequestOptions
+  ): Promise<T> => {
     const response = await fetch(this.baseURL + endPoint, {
       method: "get",
       ...options,
     });
 
-    if (response.ok) {
-      return response;
-    } else {
-      throw response;
-    }
+    if (!response.ok) throw response;
+
+    return (await response.json()) as T;
   };
 }
