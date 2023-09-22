@@ -20,7 +20,11 @@ export class HttpClient {
       ...options,
     });
 
-    if (!response.ok) throw response;
+    if (!response.ok)
+      throw new Response("", {
+        status: 404,
+        statusText: "Not Found",
+      });
 
     return (await response.json()) as T;
   };
