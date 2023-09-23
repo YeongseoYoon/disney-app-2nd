@@ -1,3 +1,5 @@
+import { API_BASE_URL } from "./config";
+
 interface HttpHeaders {
   [headerName: string]: string;
 }
@@ -29,3 +31,5 @@ export class HttpClient {
     return (await response.json()) as T;
   };
 }
+
+export const httpclient = new HttpClient(API_BASE_URL);
