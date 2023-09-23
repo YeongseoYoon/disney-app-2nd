@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
-const GlobalStyles = createGlobalStyle` 
+const GlobalStyles = createGlobalStyle`
   ${reset}
     *{
         box-sizing: border-box;
@@ -10,7 +10,11 @@ const GlobalStyles = createGlobalStyle`
         text-decoration: none;
         color: inherit;
     }
-
+    body {
+      font-family: "Chewy", cursive;
+      color: white;
+      background-color: rgb(86, 85, 85);
+    }
     button {
       border: none;
       background: none;
