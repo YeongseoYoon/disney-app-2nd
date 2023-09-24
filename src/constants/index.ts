@@ -1,5 +1,5 @@
 export const ROUTE_PATH = {
   ROOT: "/",
   HOME: "",
-  DETAIL: "character/:id",
+  DETAIL: "characters/:id",
 } as const;

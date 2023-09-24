@@ -3,3 +3,7 @@ interface Character {
   name: string;
   imageUrl: string;
 }
+
+interface CharacterDetail extends Character {
+  films: string[];
+}

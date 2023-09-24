@@ -1,11 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
-import { useQueryClient } from "@tanstack/react-query";
+import { queryClient } from "@/utils";
 
 import App from "@/App";
-import { Detail, Home, homeLoader } from "@/pages";
+import { Detail, Home, homeLoader, detailLoader } from "@/pages";
 import { ROUTE_PATH } from "@/constants";
-
-const queryClient = useQueryClient();
 
 const router = createBrowserRouter([
   {
@@ -20,6 +18,7 @@ const router = createBrowserRouter([
       {
         path: ROUTE_PATH.DETAIL,
         element: <Detail />,
+        loader: detailLoader(queryClient),
       },
     ],
   },

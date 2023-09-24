@@ -7,12 +7,12 @@ interface CharacterItemProps {
 
 const CharacterItem = ({ character }: CharacterItemProps) => {
   return (
-    <Wrapper>
-      <Link to={`character/${character.id}`}>
+    <Link to={`characters/${character.id}`}>
+      <Wrapper>
         <Image src={character.imageUrl} />
         <div>{character.name}</div>
-      </Link>
-    </Wrapper>
+      </Wrapper>
+    </Link>
   );
 };
 
